@@ -1,0 +1,34 @@
+###FindAll Task
+GET http://localhost:3000/api/tasks
+Accept: application/json
+
+###Create Task
+POST http://localhost:3000/api/tasks
+Accept: application/json
+Content-Type: application/json
+
+{
+  "nametask" : "Task 1",
+  "assignee" : "Jeryy",
+  "dateline" : "2022-01-01"
+}
+
+###Update Task
+PUT http://localhost:3000/api/tasks/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "nametask" : "Task 1xx",
+  "assignee" : "Jeryyxx",
+  "dateline" : "2022-01-01"
+}
+
+###Done Task
+PATCH http://localhost:3000/api/tasks/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "nametask" : "Task 1xx"
+}
