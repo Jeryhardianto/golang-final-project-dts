@@ -1,5 +1,4 @@
 # Golang Final Project Jery Hardianto | 152308829101-64
-## Link Final App TodoList https://frontend-final-project-dts.herokuapp.com/
 
 ## Sebelum menggunakan App Donwload extension CORS https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf 
 
@@ -11,6 +10,8 @@
   
 3. Ceklist Allow PATCH method
    ![gambar1](2.png)
+   
+## Link Final App TodoList https://frontend-final-project-dts.herokuapp.com/
 
 ## Stack yang digunakan :
 ### Backend 
