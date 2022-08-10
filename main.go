@@ -4,7 +4,6 @@ import (
 	"github.com/go-playground/validator/v10"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/julienschmidt/httprouter"
-	"io"
 	"jeryhardianto/golang-tugas/app"
 	"jeryhardianto/golang-tugas/controller"
 	"jeryhardianto/golang-tugas/helper"
@@ -32,14 +31,15 @@ func main() {
 	router.POST("/api/tasks", taskController.Create)
 	router.PUT("/api/tasks/:taskId", taskController.Update)
 	router.PATCH("/api/tasks/:taskId", taskController.DoneTask)
+
 	port := os.Getenv("PORT")
 
-	helloHandler := func(w http.ResponseWriter, req *http.Request) {
-		io.WriteString(w, "Hello, world!\n")
-	}
-	http.HandleFunc("/", helloHandler)
+	//helloHandler := func(w http.ResponseWriter, req *http.Request) {
+	//	io.WriteString(w, "Hello, world!\n")
+	//}
+	//http.HandleFunc("/", helloHandler)
 	log.Println("Listing for" + port)
-	log.Fatal(http.ListenAndServe(":"+port, nil))
+	//log.Fatal(http.ListenAndServe(":"+port, nil))
 
 	server := http.Server{
 		//Addr:    "localhost:3000",
