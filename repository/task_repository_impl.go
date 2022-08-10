@@ -63,7 +63,7 @@ func (repository *TaskRepositoryImpl) FindById(ctx context.Context, tx *sql.Tx, 
 }
 
 func (repository *TaskRepositoryImpl) FindAll(ctx context.Context, tx *sql.Tx) []domain.Task {
-	SQL := "SELECT id, task, assignee, dateline, status FROM task"
+	SQL := "SELECT id, task, assignee, dateline, status FROM task ORDER BY status ASC"
 	rows, err := tx.QueryContext(ctx, SQL)
 	helper.PanicIfError(err)
 	defer rows.Close()

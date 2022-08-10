@@ -83,6 +83,17 @@ func (service *TaskServiceImpl) DoneTask(ctx context.Context, request web.TaskDo
 	return helper.ToTaskResponse(task)
 }
 
+func (service *TaskServiceImpl) FindById(ctx context.Context, taskId int) web.TaskResponeseAll {
+	tx, err := service.DB.Begin()
+	helper.PanicIfError(err)
+	defer helper.CommitOrRollback(tx)
+
+	category, err := service.TaskRepository.FindById(ctx, tx, taskId)
+	helper.PanicIfError(err)
+
+	return helper.ToTaskResponse(category)
+}
+
 func (service *TaskServiceImpl) FindAll(ctx context.Context) []web.TaskResponeseAll {
 	tx, err := service.DB.Begin()
 	helper.PanicIfError(err)

@@ -24,6 +24,7 @@ func main() {
 	router := httprouter.New()
 
 	router.GET("/api/tasks", taskController.FindAll)
+	router.GET("/api/tasks/:taskId", taskController.FindById)
 	router.POST("/api/tasks", taskController.Create)
 	router.PUT("/api/tasks/:taskId", taskController.Update)
 	router.PATCH("/api/tasks/:taskId", taskController.DoneTask)

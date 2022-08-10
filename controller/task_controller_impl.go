@@ -74,6 +74,21 @@ func (controller *TaskControllerImpl) DoneTask(writer http.ResponseWriter, reque
 	helper.WriteToResponseBody(writer, webResponse)
 }
 
+func (controller *TaskControllerImpl) FindById(writer http.ResponseWriter, request *http.Request, params httprouter.Params) {
+	taskId := params.ByName("taskId")
+	id, err := strconv.Atoi(taskId)
+	helper.PanicIfError(err)
+
+	taskResponse := controller.TaskService.FindById(request.Context(), id)
+	webResponse := web.WebResponse{
+		Code:   200,
+		Status: "OK",
+		Data:   taskResponse,
+	}
+
+	helper.WriteToResponseBody(writer, webResponse)
+}
+
 func (controller *TaskControllerImpl) FindAll(writer http.ResponseWriter, request *http.Request, params httprouter.Params) {
 
 	taskResponses := controller.TaskService.FindAll(request.Context())

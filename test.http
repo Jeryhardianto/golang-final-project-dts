@@ -14,13 +14,13 @@ Content-Type: application/json
 }
 
 ###Update Task
-PUT http://localhost:3000/api/tasks/1
+PUT http://localhost:3000/api/tasks/16
 Accept: application/json
 Content-Type: application/json
 
 {
-  "nametask" : "Task 1xx",
-  "assignee" : "Jeryyxx",
+  "nametask" : "Taskdd 1xx",
+  "assignee" : "Jeryyddxx",
   "dateline" : "2022-01-01"
 }
 
@@ -32,3 +32,13 @@ Content-Type: application/json
 {
   "nametask" : "Task 1xx"
 }
+
+###Get By Id
+GET http://localhost:3000/api/tasks/16
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id" : "16"
+}
+
