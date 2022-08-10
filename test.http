@@ -1,5 +1,6 @@
 ###FindAll Task
-GET http://localhost:3000/api/tasks
+#GET http://localhost:3000/api/tasks
+GET https://golang-final-project.herokuapp.com/api/tasks
 Accept: application/json
 
 ###Create Task

@@ -31,7 +31,7 @@ func main() {
 
 	server := http.Server{
 		//Addr:    "localhost:3000",
-		Addr:    "0.0.0.0",
+		Addr:    "0.0.0.0:3000",
 		Handler: router,
 	}
 
