@@ -40,7 +40,6 @@ func main() {
 	http.HandleFunc("/", helloHandler)
 	log.Println("Listing for" + port)
 	log.Fatal(http.ListenAndServe(":"+port, nil))
-}
 
 	server := http.Server{
 		//Addr:    "localhost:3000",
