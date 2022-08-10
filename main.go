@@ -30,7 +30,8 @@ func main() {
 	router.PATCH("/api/tasks/:taskId", taskController.DoneTask)
 
 	server := http.Server{
-		Addr:    "localhost:3000",
+		//Addr:    "localhost:3000",
+		Addr:    "https://golang-final-project.herokuapp.com",
 		Handler: router,
 	}
 
