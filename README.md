@@ -4,7 +4,7 @@
 ## Sebelum menggunakan App Donwload extension CORS https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf 
 
 ### Masuk ke extension
-  ![Merge-Direct-Path](1.PNG)
+  ![gambar1](1.png)
 
 
 ## Stack yang digunakan :
