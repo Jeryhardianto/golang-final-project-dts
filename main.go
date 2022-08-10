@@ -31,7 +31,7 @@ func main() {
 
 	server := http.Server{
 		//Addr:    "localhost:3000",
-		Addr:    "https://golang-final-project.herokuapp.com:80",
+		Addr:    "https://golang-final-project.herokuapp.com",
 		Handler: router,
 	}
 
